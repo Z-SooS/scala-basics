@@ -1,15 +1,33 @@
 package variablesactivity
 
 object Activity1 {
-    def main(args: Array[String]): Unit = {
-    val donut1Name = "Vanilla Donut"
-    val donut1Quantity : Int = 10
-    val donut1Price = 2.5f
 
-    val donut2 = ("Glazed Donut", 10, 2.5f)
+  /**
+   *
+   * @param args Command line argument, takes three arguments as 'name: String' 'amount: Int' 'price: Float'
+   */
+  def main(args: Array[String]): Unit = {
 
-    printDonutInfo(donut1Name, donut1Quantity, donut1Price)
-    printDonutInfo(donut2._1, donut2._2, donut2._3)
+    val defaultName = "Default Donut"
+    val defaultQuantity: Int = 1
+    val defaultPrice = 2.5f
+
+    var donutName = defaultName
+    var donutQuantity = defaultQuantity
+    var donutPrice = defaultPrice
+
+    if (args.length >= 3) {
+      try {
+        donutName = args(0)
+        donutQuantity = args(1).toInt
+        donutPrice = args(2).toFloat
+      }
+      catch {
+        case e: NumberFormatException => println(e);donutName = defaultName;donutPrice=defaultPrice;donutQuantity=defaultQuantity
+      }
+    }
+
+    printDonutInfo(donutName, donutQuantity, donutPrice)
   }
 
   private def printDonutInfo(name: String, quantity: Int, price: Float): Unit = {
