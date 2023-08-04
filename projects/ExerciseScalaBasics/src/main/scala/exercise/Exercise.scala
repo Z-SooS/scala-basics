@@ -30,6 +30,12 @@ object Exercise {
 
     println("Exercise7:")
     println(s"Result: ${exercise7(text)}")
+
+    println("Give me a third number:")
+    val c = scala.io.StdIn.readInt()
+
+    println("Exercise8:")
+    println(s"Result: ${exercise8(a, b, c)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -71,4 +77,7 @@ object Exercise {
 
   //Write a Scala program to check whether a given string starts with 'Sc' or not.
   private def exercise7(text: String): Boolean = text.length > 1 && text.substring(0, 2).equalsIgnoreCase("sc")
+
+  //Write a Scala program to check the largest number among three given integers.
+  private def exercise8(a: Int, b: Int, c: Int): Int = math.max(a, math.max(b, c))
 }
