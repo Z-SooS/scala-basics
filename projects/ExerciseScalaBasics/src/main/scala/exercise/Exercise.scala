@@ -36,6 +36,9 @@ object Exercise {
 
     println("Exercise8:")
     println(s"Result: ${exercise8(a, b, c)}")
+
+    println("Exercise9:")
+    println(s"Result: ${exercise9(a, b)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -80,4 +83,8 @@ object Exercise {
 
   //Write a Scala program to check the largest number among three given integers.
   private def exercise8(a: Int, b: Int, c: Int): Int = math.max(a, math.max(b, c))
+
+  //Write a Scala program to check whether two given positive integers have the
+  //same last digit.
+  private def exercise9(a: Int, b: Int): Boolean = a % 10 == b % 10
 }
