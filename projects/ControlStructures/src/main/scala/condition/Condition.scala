@@ -48,9 +48,9 @@ object Condition {
     if (n % 2 == 0 || n % 3 == 0) return false
 
     for (i <- 5 to math.sqrt(n).toInt by 6) {
-      if (n % i == 0 || n % (i + 2) == 0) return false;
+      if (n % i == 0 || n % (i + 2) == 0) return false
     }
 
-    return true
+    true
   }
 }
