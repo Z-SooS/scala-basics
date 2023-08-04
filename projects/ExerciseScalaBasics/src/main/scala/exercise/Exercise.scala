@@ -39,6 +39,28 @@ object Exercise {
 
     println("Exercise9:")
     println(s"Result: ${exercise9(a, b)}")
+
+    //Commented out for convenience
+//    val haystackString = scala.io.StdIn.readLine("\nGive me a string to search in:\n")
+//    val searchString1 = scala.io.StdIn.readLine("\nGive me a string to search for:\n")
+//    val searchString2 = scala.io.StdIn.readLine("\nGive me another string to search for:\n")
+//
+//    println("Exercise10:")
+//    println(s"The given string is: $haystackString")
+//    println(s"Are the appearance of '$searchString1' and '$searchString2' equal? ${exercise10(haystackString, searchString1, searchString2)}")
+
+    var haystackString = "Thisisthethesis"
+    val searchString1 = "the"
+    val searchString2 = "is"
+
+    println("Exercise10:")
+    println(s"The given string is: $haystackString")
+    println(s"Are the appearance of '$searchString1' and '$searchString2' equal? ${exercise10(haystackString, searchString1, searchString2)}")
+
+    haystackString = "Thisisthethes"
+
+    println(s"The given string is: $haystackString")
+    println(s"Are the appearance of '$searchString1' and '$searchString2' equal? ${exercise10(haystackString, searchString1, searchString2)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -87,4 +109,16 @@ object Exercise {
   //Write a Scala program to check whether two given positive integers have the
   //same last digit.
   private def exercise9(a: Int, b: Int): Boolean = a % 10 == b % 10
+
+  //Write a Scala program to program to check the number of appearances of
+  //the two substrings that appear anywhere in the string.
+  private def exercise10(text: String, search1: String, search2: String): Boolean = {
+    val searchLower1 = search1.toLowerCase()
+    val searchLower2 = search2.toLowerCase()
+
+    val count1 = text.toLowerCase().sliding(searchLower1.length).count(w => w == searchLower1)
+    val count2 = text.toLowerCase().sliding(searchLower2.length).count(w => w == searchLower2)
+
+    count1 equals count2
+  }
 }
