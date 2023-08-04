@@ -17,6 +17,10 @@ object Exercise {
     println("Exercise3:")
     println(s"Result: ${exercise3(a, b)}")
 
+    val text = scala.io.StdIn.readLine("\nGive me a string:\n")
+
+    println("Exercise4:")
+    println(s"Result: ${exercise4(text)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -34,4 +38,12 @@ object Exercise {
   //Write a Scala program to check two given integers, and return true if one of
   //them is 30 or if their sum is 30.
   private def exercise3(a: Int, b: Int): Boolean = a == 30 || b == 30 || a + b == 30
+
+  //Write a Scala program to exchange the first and last characters in a given
+  //string and return the new string.
+  private def exercise4(text: String): String = {
+    if (text.length < 2) return text
+
+    text(text.length - 1) + text.substring(1, text.length - 1) + text(0)
+  }
 }
