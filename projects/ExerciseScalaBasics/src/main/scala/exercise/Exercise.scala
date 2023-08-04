@@ -14,6 +14,9 @@ object Exercise {
     println("Exercise2:")
     println(s"Result: ${exercise2(a)}")
 
+    println("Exercise3:")
+    println(s"Result: ${exercise3(a, b)}")
+
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -27,4 +30,8 @@ object Exercise {
 
     if (n > 51) 3 * diff else diff
   }
+
+  //Write a Scala program to check two given integers, and return true if one of
+  //them is 30 or if their sum is 30.
+  private def exercise3(a: Int, b: Int): Boolean = a == 30 || b == 30 || a + b == 30
 }
