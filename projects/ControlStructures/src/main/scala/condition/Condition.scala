@@ -17,7 +17,8 @@ object Condition {
       else "they do not meet requirements"
     }")
 
-
+    println("\nActivity 3")
+    println(s"The number $a ${if (activity3(a)) "IS" else "IS NOT"} a prime number")
   }
 
   //Write a Scala program to check a given integer and return true if it is within 20 of 100 or false in the other case.
@@ -37,5 +38,19 @@ object Condition {
     } else {
       false
     }
+  }
+
+  //Write a Scala Program to accept the input from the user and check if the input from the user is Prime number or not.
+  // Hint: Use if condition.
+  private def activity3(n: Int): Boolean = {
+    if (n <= 1) return false
+    if (n <= 3) return true
+    if (n % 2 == 0 || n % 3 == 0) return false
+
+    for (i <- 5 to math.sqrt(n).toInt by 6) {
+      if (n % i == 0 || n % (i + 2) == 0) return false;
+    }
+
+    return true
   }
 }
