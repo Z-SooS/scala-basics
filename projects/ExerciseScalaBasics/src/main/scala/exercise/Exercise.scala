@@ -21,6 +21,9 @@ object Exercise {
 
     println("Exercise4:")
     println(s"Result: ${exercise4(text)}")
+
+    println("Exercise5:")
+    println(s"Result: ${exercise5(text)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -45,5 +48,14 @@ object Exercise {
     if (text.length < 2) return text
 
     text(text.length - 1) + text.substring(1, text.length - 1) + text(0)
+  }
+
+  //Write a Scala program to create a new string which is 4 copies of the 2 front
+  //characters of a given string.If the given string length is less than 2 return the
+  //original string.
+  private def exercise5(text: String): String = {
+    if (text.length < 2) return text
+
+    text.substring(0, 2).repeat(4)
   }
 }
