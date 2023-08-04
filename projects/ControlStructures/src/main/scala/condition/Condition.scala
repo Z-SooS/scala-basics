@@ -23,6 +23,11 @@ object Condition {
     println("\nActivity 4")
     println(activity4(a))
 
+    println("Please give me a character")
+    val c = scala.io.StdIn.readChar()
+
+    println("\nActivity 5")
+    println(s"The character $c is: ${activity5(c)}")
   }
 
   //Write a Scala program to check a given integer and return true if it is within 20 of 100 or false in the other case.
@@ -64,5 +69,15 @@ object Condition {
     s"The number '$n' " +
       (if (n > 0) "greater than" else if (n < 0) "less than" else "is") +
       " zero"
+  }
+
+  //Write a Scala read a character from the user and check given character is vowel or consonant.
+  //Hint: Use Case statements.
+  private def activity5(c: Char): String = {
+    c match {
+      case 'a' | 'e' | 'i' | 'o' | 'u' => "vowel"
+      case 'b' | 'c' | 'd' | 'f' | 'g' | 'h' | 'j' | 'k' | 'l' | 'm' | 'n' | 'p' | 'q' | 'r' | 's' | 't' | 'v' | 'w' | 'x' | 'y' | 'z' => "consonant"
+      case _ => "not a letter"
+    }
   }
 }
