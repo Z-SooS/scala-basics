@@ -19,6 +19,10 @@ object Condition {
 
     println("\nActivity 3")
     println(s"The number $a ${if (activity3(a)) "IS" else "IS NOT"} a prime number")
+
+    println("\nActivity 4")
+    println(activity4(a))
+
   }
 
   //Write a Scala program to check a given integer and return true if it is within 20 of 100 or false in the other case.
@@ -52,5 +56,13 @@ object Condition {
     }
 
     true
+  }
+
+  //Write a Scala program to get a number from the user and print whether it is positive or negative
+  //Hint: Use if condition.
+  private def activity4(n: Int): String = {
+    s"The number '$n' " +
+      (if (n > 0) "greater than" else if (n < 0) "less than" else "is") +
+      " zero"
   }
 }
