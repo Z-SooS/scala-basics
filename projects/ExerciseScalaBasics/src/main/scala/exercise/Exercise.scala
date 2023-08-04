@@ -27,6 +27,9 @@ object Exercise {
 
     println("Exercise6:")
     println(s"Result: ${exercise6(a)}")
+
+    println("Exercise7:")
+    println(s"Result: ${exercise7(text)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -65,4 +68,7 @@ object Exercise {
   //Write a Scala program to check whether a given positive number (3,12,14,37)
   //is a multiple of 3 or a multiple of 7.
   private def exercise6(n: Int): Boolean = n % 3 == 0 || n % 7 == 0
+
+  //Write a Scala program to check whether a given string starts with 'Sc' or not.
+  private def exercise7(text: String): Boolean = text.length > 1 && text.substring(0, 2).equalsIgnoreCase("sc")
 }
