@@ -24,6 +24,9 @@ object Exercise {
 
     println("Exercise5:")
     println(s"Result: ${exercise5(text)}")
+
+    println("Exercise6:")
+    println(s"Result: ${exercise6(a)}")
   }
 
   //  Write a Scala program to compute the sum of the two given integer values. If
@@ -58,4 +61,8 @@ object Exercise {
 
     text.substring(0, 2).repeat(4)
   }
+
+  //Write a Scala program to check whether a given positive number (3,12,14,37)
+  //is a multiple of 3 or a multiple of 7.
+  private def exercise6(n: Int): Boolean = n % 3 == 0 || n % 7 == 0
 }
