@@ -7,6 +7,7 @@ object Exercise {
     Activity.activity1(-5)
     Activity.activity2()
     Activity.activity3()
+    Activity.activity4()
   }
 
 
