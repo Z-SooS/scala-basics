@@ -10,6 +10,7 @@ object Exercise {
     Activity.activity4()
     Activity.activity5(15)
     Activity.activity5(-15)
+    Activity.activity6("Hello")
   }
 
 

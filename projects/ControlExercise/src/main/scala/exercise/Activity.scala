@@ -40,4 +40,18 @@ object Activity {
 
     countdown(nOuter)
   }
+
+
+  //Write a for loop for computing the product of the Unicode codes of all letters
+  //in a string. For example, the product of the characters
+  //in "Hello" is 9415087488L.
+  def activity6(input: String): Unit = {
+    var product: Long = 1L
+
+    for (c <- input) {
+      product *= c.toLong
+    }
+
+    println(s"The product of '$input' is $product")
+  }
 }
