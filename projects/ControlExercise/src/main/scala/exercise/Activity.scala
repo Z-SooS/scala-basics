@@ -46,20 +46,26 @@ object Activity {
   //in a string. For example, the product of the characters
   //in "Hello" is 9415087488L.
   def activity6(input: String): Unit = {
-    var product: Long = 1L
+    var result: Long = 1L
 
     for (c <- input) {
-      product *= c.toLong
+      result *= c.toLong
     }
 
-    println(s"The product of '$input' is $product")
+    println(s"The result of '$input' is $result")
   }
 
   //Solve the preceding exercise without writing a loop. (Hint: Look at
   //the StringOps Scaladoc.)
   def activity7(input: String): Unit = {
-    val product = input.foldLeft(1L)((accumulator, c) => accumulator * c.toLong)
+    val result = product(input)
 
-    println(s"No loop: The product of '$input' is $product")
+    println(s"No loop: The result of '$input' is $result")
   }
+
+  //8. Write a function product(s : String) that computes the product, as described
+  //in the preceding exercises.
+  private def product(s: String): Long = s.foldLeft(1L)((accumulator, c) => accumulator * c.toLong)
+
+
 }
