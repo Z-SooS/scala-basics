@@ -5,6 +5,8 @@ object Exercise {
     Activity.activity1(5)
     Activity.activity1(0)
     Activity.activity1(-5)
-
+    Activity.activity2()
   }
+
+
 }

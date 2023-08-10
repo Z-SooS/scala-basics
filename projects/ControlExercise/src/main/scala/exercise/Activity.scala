@@ -8,4 +8,10 @@ object Activity {
 
     println(s"The signum of $n is $signum")
   }
+
+
+  //What is the value of an empty block expression {}? What is its type?
+  def activity2(): Unit = {
+    println("The value and type of an empty block is 'Unit'")
+  }
 }
