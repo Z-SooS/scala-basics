@@ -28,4 +28,16 @@ object Activity {
     println("for (i <- 10 to 0 by -1) println(i)")
     //for (i <- 10 to 0 by -1) println(i)
   }
+
+  //Write a procedure countdown(n: Int) that prints the numbers from n to 0.
+  def activity5(nOuter: Int): Unit = {
+    def countdown(n: Int): Unit = {
+      val direction = if (n > 0) -1 else 1
+
+      val result = (n to 0 by direction).mkString(" ")
+      println(result)
+    }
+
+    countdown(nOuter)
+  }
 }

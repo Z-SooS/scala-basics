@@ -8,6 +8,8 @@ object Exercise {
     Activity.activity2()
     Activity.activity3()
     Activity.activity4()
+    Activity.activity5(15)
+    Activity.activity5(-15)
   }
 
 
