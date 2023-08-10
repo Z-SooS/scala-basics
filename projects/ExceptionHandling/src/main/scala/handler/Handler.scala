@@ -3,7 +3,7 @@ package handler
 object Handler {
   def main(args: Array[String]): Unit = {
     activity1()
-
+    activity2()
   }
 
 
@@ -27,5 +27,24 @@ object Handler {
     if (n < 0) throw new ArithmeticException(s"$n is not a real number")
 
     math.sqrt(n)
+  }
+
+  //Write a program to handle the Divide by Zero exception in Scala.
+  //              Hint: Use multiple catch statements to handle divide by zero cases.
+  private def activity2(): Unit = {
+    println("Please give me a number")
+    try {
+      val num1: Int = scala.io.StdIn.readInt()
+
+      println("Please give me another number")
+      val num2: Int = scala.io.StdIn.readInt()
+
+      val result: Double = num1 / num2
+
+      println(s"$num1 / $num2 = $result")
+    } catch {
+      case nfo: NumberFormatException => println("This is not a number ",nfo)
+      case ae: ArithmeticException => println(ae)
+    }
   }
 }
