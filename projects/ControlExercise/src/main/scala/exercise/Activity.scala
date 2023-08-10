@@ -54,4 +54,12 @@ object Activity {
 
     println(s"The product of '$input' is $product")
   }
+
+  //Solve the preceding exercise without writing a loop. (Hint: Look at
+  //the StringOps Scaladoc.)
+  def activity7(input: String): Unit = {
+    val product = input.foldLeft(1L)((accumulator, c) => accumulator * c.toLong)
+
+    println(s"No loop: The product of '$input' is $product")
+  }
 }

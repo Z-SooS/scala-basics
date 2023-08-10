@@ -11,6 +11,7 @@ object Exercise {
     Activity.activity5(15)
     Activity.activity5(-15)
     Activity.activity6("Hello")
+    Activity.activity7("Hello")
   }
 
 
