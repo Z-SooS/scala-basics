@@ -67,5 +67,21 @@ object Activity {
   //in the preceding exercises.
   private def product(s: String): Long = s.foldLeft(1L)((accumulator, c) => accumulator * c.toLong)
 
+  //Make the function of the preceding exercise a recursive function.
+  def activity8(input: String): Unit = {
+    val result = recursiveProduct(input)
+
+    println(s"The recursive result is $result")
+  }
+
+  private def recursiveProduct(subString: String) : Long = {
+    if (subString.isEmpty) {
+      return 1L
+    }
+    if (subString.length == 1) return subString.charAt(0).toLong
+
+    subString.charAt(0).toLong * recursiveProduct(subString.tail)
+  }
+
 
 }
