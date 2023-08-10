@@ -14,4 +14,10 @@ object Activity {
   def activity2(): Unit = {
     println("The value and type of an empty block is 'Unit'")
   }
+
+  //Come up with one situation where the assignment x = y = 1 is valid in Scala.
+  //(Hint: Pick a suitable type for x.)
+  def activity3(): Unit = {
+    println("'x = y = 1' is valid if x is of type 'Any'")
+  }
 }
