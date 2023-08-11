@@ -3,6 +3,7 @@ package vectorlesson
 object VectorLesson {
   def main(args: Array[String]): Unit = {
     minMaxVector()
+    vectorReverse()
   }
 
   //Create a Vector with the following numeric items:
@@ -15,5 +16,15 @@ object VectorLesson {
     // sorted.head?
     println(s"The smallest item in the vector is ${v.min}")
     println(s"The largest item in the vector is ${v.max}")
+  }
+
+  //Write a Scala program to create an object of Vector collection.
+  //Then we will reverse the vector elements using
+  //the reverse() method and print the reversed vector on the console screen.
+  private def vectorReverse(): Unit = {
+    val v = Vector("first", "second", "third")
+
+    println(s"Original vector:\n$v")
+    println(s"Reversed vector:\n${v.reverse}")
   }
 }
