@@ -46,11 +46,19 @@ object TupleLesson {
     val data = getCarStockData
 
     displayCarList(data)
+    println("\nActivity 4\n")
+    displayCarList(orderByLowestStock(data))
   }
 
   private def displayCarList(list: List[CarStock]):Unit = {
     for ((car, stock) <- list)
       println(s"- a ${car.name} with the price of ${car.price} and stock of $stock")
+  }
+
+  //Create a method named orderByLowestStock which will input the Collection data structure of cars
+  //to stock and order the car items from the collection by the lowest or minimum stock quantity.
+  private def orderByLowestStock(list: List[CarStock]):List[CarStock] = {
+    list.sortBy(t => t._2)
   }
 
   private def getCarStockData:List[CarStock] =
