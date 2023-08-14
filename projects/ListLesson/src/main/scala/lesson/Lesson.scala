@@ -14,6 +14,7 @@ object Lesson {
     println(sumNumberList(numberList))
 
     generateLists()
+    deleteElements()
   }
 
   //Write a Scala program to create two Lists data structures as follows:
@@ -69,5 +70,21 @@ object Lesson {
     println("Range")
     println(listRange1)
     println(listRange2)
+  }
+
+  //Write a Scala program to delete the element(s) from a given List.
+  private def deleteElements():Unit = {
+    println("Deleting elements\n")
+
+    val originalList = List(1,2,3,4,5)
+
+    val filtered = originalList.filter(x => x == 2 || x == 4)
+    println("filtered\n"+filtered)
+
+    val filterNot = originalList.filterNot(x => x == 2 || x == 4)
+    println("filterNot\n"+filterNot)
+
+    val dropped = originalList.drop(2)
+    println("dropped\n"+dropped)
   }
 }
