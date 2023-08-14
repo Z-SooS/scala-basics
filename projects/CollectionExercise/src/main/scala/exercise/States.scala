@@ -63,6 +63,11 @@ object States {
     println("\nCAPITALS:\n=======")
     states.keys.toList.sorted.foreach(key => println(states(key)))
   }
+
+  def printStateWithCapital(): Unit = {
+    println("\nSTATE -> CAPITAL:\n=======")
+    states.keys.toList.sorted.foreach(key => println(s"$key -> ${states(key)}"))
+  }
   //Write a Scala program based on the below instructions.
 
   //a) Create a Map to hold the names of all the states and their corresponding
