@@ -1,4 +1,4 @@
-package exercise
+package exercise.subtasks
 
 object States {
   private val states = Map(
