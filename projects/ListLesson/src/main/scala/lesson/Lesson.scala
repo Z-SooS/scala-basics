@@ -10,6 +10,8 @@ object Lesson {
 
     val numberList = getNumberList
     println(numberList)
+
+    println(sumNumberList(numberList))
   }
 
   //Write a Scala program to create two Lists data structures as follows:
@@ -28,4 +30,12 @@ object Lesson {
   //Create a Scala program to represent a List with a sequence of number from 100 to 150.
   //You should omit the last numeric item of 150, and each numeric item should have a 10 numeric interval.
   private def getNumberList: List[Int] = List.range(100, 150, 10)
+
+  //You should then calculate the sum of all the numeric items in the List.
+  private def sumNumberList(numbers: List[Int]):Int = {
+    //l.sum
+    var s = 0
+    for (num <- numbers) s += num
+    s
+  }
 }
