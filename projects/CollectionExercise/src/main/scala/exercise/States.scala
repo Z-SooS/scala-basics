@@ -55,8 +55,13 @@ object States {
   )
 
   def printStates(): Unit = {
-    println("STATES:\n=======")
+    println("\nSTATES:\n=======")
     states.keys.toList.sorted.foreach(println)
+  }
+
+  def printCapitals(): Unit = {
+    println("\nCAPITALS:\n=======")
+    states.keys.toList.sorted.foreach(key => println(states(key)))
   }
   //Write a Scala program based on the below instructions.
 
