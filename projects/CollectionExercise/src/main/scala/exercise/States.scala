@@ -55,18 +55,21 @@ object States {
   )
 
   def printStates(): Unit = {
-    println("\nSTATES:\n=======")
+    println("STATES:\n=======")
     states.keys.toList.sorted.foreach(println)
+    println()
   }
 
   def printCapitals(): Unit = {
-    println("\nCAPITALS:\n=======")
+    println("CAPITALS:\n=======")
     states.keys.toList.sorted.foreach(key => println(states(key)))
+    println()
   }
 
   def printStateWithCapital(): Unit = {
-    println("\nSTATE -> CAPITAL:\n=======")
+    println("STATE -> CAPITAL:\n=======")
     states.keys.toList.sorted.foreach(key => println(s"$key -> ${states(key)}"))
+    println()
   }
   //Write a Scala program based on the below instructions.
 
