@@ -12,6 +12,8 @@ object Lesson {
     println(numberList)
 
     println(sumNumberList(numberList))
+
+    generateLists()
   }
 
   //Write a Scala program to create two Lists data structures as follows:
@@ -37,5 +39,35 @@ object Lesson {
     var s = 0
     for (num <- numbers) s += num
     s
+  }
+
+  //Write a Scala program to create a list in different ways
+  private def generateLists():Unit = {
+    val l1 = List(1,2,3,4,5)
+    println(l1)
+
+    val l2 = 6::7::8::9::10::Nil
+    println(l2)
+
+    val empty = List.empty
+    println("empty"+empty)
+
+
+    val fill = List.fill(5)(10)
+    println("fill\n"+fill)
+
+    val concat = l1 ++ l2
+    val concat2 = l1 ::: l2
+
+    println("Concat")
+    println(concat)
+    println(concat2)
+
+    val listRange1 = (0 to 10 by 2).toList
+    val listRange2 = List.range(1,9,2)
+
+    println("Range")
+    println(listRange1)
+    println(listRange2)
   }
 }
