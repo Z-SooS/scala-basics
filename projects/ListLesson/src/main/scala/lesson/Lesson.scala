@@ -7,6 +7,7 @@ object Lesson {
     val combined = mergeLists(list1,list2)
 
     outputListForClassroom(combined.flatten)
+    outputListForClassroom(getNumberSequence)
   }
 
   //Write a Scala program to create two Lists data structures as follows:
@@ -17,8 +18,11 @@ object Lesson {
   //Merge the two List data structures such that the resulting combined data structure is of type List[List[String]].
   //Finally, output all items with the literal " is required in the classroom."
   private def mergeLists[T](lists: List[T]*) : List[List[T]] = lists.toList
-  
+
   private def outputListForClassroom(l : List[Any]) : Unit = {
     l.foreach(printf("%s is required in the classroom.\n", _))
   }
+
+  //Create a Scala program to represent a List with a sequence of number from 100 to 150.
+  private def getNumberSequence:List[Int] = List.range(100,151)
 }
