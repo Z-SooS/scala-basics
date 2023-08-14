@@ -1,7 +1,73 @@
 package exercise.subtasks
 
+import scala.annotation.tailrec
+
 object IOHandler {
   def print(text: String): Unit = println(text)
+
+  def readString(prompt: String): String = {
+    scala.io.StdIn.readLine(prompt)
+  }
+
+  @tailrec
+  def readInt(prompt: String, min: Int, max: Int): Int = {
+    print(prompt)
+    try {
+      val input = scala.io.StdIn.readInt()
+
+      if (input < min || input > max) throw new NumberFormatException("Number must be within parameters")
+
+      input
+    }
+    catch {
+      case _: NumberFormatException => readInt(prompt, min, max)
+    }
+  }
+
+  @tailrec
+  def readDouble(prompt: String, min: Double, max: Double): Double = {
+    print(prompt)
+    try {
+      val input = scala.io.StdIn.readDouble()
+
+      if (input < min || input > max) throw new NumberFormatException("Number must be within parameters")
+
+      input
+    }
+    catch {
+      case _: NumberFormatException => readDouble(prompt, min, max)
+    }
+  }
+
+  @tailrec
+  def readFloat(prompt: String, min: Float, max: Float): Float = {
+    print(prompt)
+    try {
+      val input = scala.io.StdIn.readFloat()
+
+      if (input < min || input > max) throw new NumberFormatException("Number must be within parameters")
+
+      input
+    }
+    catch {
+      case _: NumberFormatException => readFloat(prompt, min, max)
+    }
+  }
+
+  @tailrec
+  def readLong(prompt: String, min: Long, max: Long): Long = {
+    print(prompt)
+    try {
+      val input = scala.io.StdIn.readLong()
+
+      if (input < min || input > max) throw new NumberFormatException("Number must be within parameters")
+
+      input
+    }
+    catch {
+      case _: NumberFormatException => readLong(prompt, min, max)
+    }
+  }
 
 
   //2. Write a Scala Program based on the instruction below
