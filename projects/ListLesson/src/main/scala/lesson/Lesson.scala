@@ -7,7 +7,9 @@ object Lesson {
     val combined = mergeLists(list1,list2)
 
     outputListForClassroom(combined.flatten)
-    outputListForClassroom(getNumberSequence)
+
+    val numberList = getNumberList
+    println(numberList)
   }
 
   //Write a Scala program to create two Lists data structures as follows:
@@ -24,5 +26,6 @@ object Lesson {
   }
 
   //Create a Scala program to represent a List with a sequence of number from 100 to 150.
-  private def getNumberSequence:List[Int] = List.range(100,151)
+  //You should omit the last numeric item of 150, and each numeric item should have a 10 numeric interval.
+  private def getNumberList: List[Int] = List.range(100, 150, 10)
 }
