@@ -5,4 +5,5 @@ object OOPActivity extends App{
 
   println(chaos.color())
   println(chaos.animal())
+  println(chaos.numbers(10,99))
 }
