@@ -19,4 +19,9 @@ class BarelyControlledChaos {
   def numbers(a: Int, b: Int): Int = {
     scala.util.Random.between(a,b+1)
   }
+
+  def pickFromSequence[A](l: Seq[A]): A = {
+    val max = l.length
+    l(scala.util.Random.nextInt(max))
+  }
 }
