@@ -7,6 +7,8 @@ object Recursions {
     println(fibonacci(90))
 
     println(factorial(10))
+
+    println(sum(10))
   }
 
   //Write a program to calculate a Fibonacci sequence recursively using Scala.
@@ -38,5 +40,16 @@ object Recursions {
     if (n <= 1) return acc
 
     factorial(n - 1, n * acc)
+  }
+
+  def sum(n: Int): Long = {
+    sum(n, 0)
+  }
+
+  @tailrec
+  private def sum(n: Int, acc: Long): Long = {
+    if (n <= 0) return acc
+
+    sum(n - 1, acc + n)
   }
 }
