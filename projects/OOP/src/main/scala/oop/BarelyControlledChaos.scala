@@ -10,4 +10,9 @@ class BarelyControlledChaos {
     val colors = Array("red","white","blue","yellow", "green")
     colors(scala.util.Random.nextInt(colors.length))
   }
+
+  def animal(): String = {
+    val animals = Array("fox", "dog", "cat", "bird", "mouse")
+    animals(scala.util.Random.nextInt(animals.length))
+  }
 }
