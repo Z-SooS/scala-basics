@@ -6,5 +6,7 @@ object Exercise {
     Partial.runExercise()
     println()
     School.runExercise()
+    println()
+    CarInventory.runExercise()
   }
 }

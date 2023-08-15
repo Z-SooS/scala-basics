@@ -14,11 +14,20 @@ object CarInventory {
       (Car("mazda 3 series", 15.000), 49),
     )
 
+    println("Car list")
     printCars(carInventory)
+    
+    println("\nSorted car list:")
+    printCars(orderByLowestStock(carInventory))
   }
 
   private def printCars(cars: List[CarStock]): Unit = {
     cars.foreach((car, inv) => println(s"a ${car.name} with price of ${car.price} and stock of $inv"))
+  }
+
+  private def orderByLowestStock(cars: List[CarStock]): List[CarStock] = {
+//    cars.sortWith(_._2 < _._2)
+    cars.sortWith((stock1: CarStock, stock2: CarStock) => stock1._2 < stock2._2)
   }
 
   //Write a Scala program to simulate a very basic car inventory. In doing so,
@@ -35,4 +44,8 @@ object CarInventory {
   //- a bmw 3 series with price of 20,000 and stock of 200
   //- a bmw 5 series with price of 50,000 and stock of 75
   //- a mazda 3 series with price of 15,000 and stock of 49
+
+  //Create a method named orderByLowestStock which will have as input the
+  //Collection data structure of cars to stock, and will order the car items from
+  //the collection by the lowest or minimum stock quantity.
 }
