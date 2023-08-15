@@ -8,5 +8,7 @@ object Exercise {
     School.runExercise()
     println()
     CarInventory.runExercise()
+    println()
+    Pastry.runExercise()
   }
 }
