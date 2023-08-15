@@ -1,5 +1,7 @@
 package oop
 
+import oop.subtask.*
+
 object OOPActivity extends App{
   private val chaos = BarelyControlledChaos()
 
