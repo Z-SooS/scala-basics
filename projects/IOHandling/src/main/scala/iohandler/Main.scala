@@ -1,12 +1,13 @@
 package iohandler
 
 import com.opencsv.CSVReader
+import iohandler.subtask.CsvFile
 
 import java.io.InputStreamReader
 
 object Main {
   def main(args: Array[String]): Unit = {
-
+    CsvFile.runActivity()
   }
 
   private def messingAround():Unit = {
