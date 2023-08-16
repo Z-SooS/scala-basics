@@ -1,17 +1,30 @@
 package iohandler
 
 import com.opencsv.CSVReader
-import iohandler.subtask.{CsvFile, JsonHandler}
+import iohandler.lab.Lab
+import iohandler.subtask.{CsvFile, JsonHandler, JsonMatcher}
+import iohandler.exercise.Exercise
 
 import java.io.InputStreamReader
 
 object Main {
   def main(args: Array[String]): Unit = {
-    CsvFile.runActivity()
-    JsonHandler.runActivity()
+//    runWithSbt()
+    runCurrentFile()
   }
 
-  private def messingAround():Unit = {
+  private def runWithSbt(): Unit = {
+    CsvFile.runActivity()
+    JsonHandler.runActivity()
+    JsonMatcher.runActivity()
+  }
+
+  private def runCurrentFile(): Unit = {
+    Lab.runActivity()
+    Exercise.sampleFile()
+  }
+
+  private def messingAround(): Unit = {
     val filename = "/trial.csv"
     val csvStream = getClass.getResourceAsStream(filename)
 
