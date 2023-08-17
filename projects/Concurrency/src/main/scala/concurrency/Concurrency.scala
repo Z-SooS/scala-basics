@@ -21,6 +21,15 @@ object Concurrency {
     t2.start()
     t3.start()
 
+    displayAllThreads()
+  }
+
+  private def displayAllThreads(): Unit = {
+    val threadMXBean = java.lang.management.ManagementFactory.getThreadMXBean
+
+    val threads = threadMXBean.dumpAllThreads(false, false)
+
+    threads.foreach(threadInfo => println(s"Thread: ${threadInfo.getThreadName}"))
   }
 }
 class MyThread(threadGroup: ThreadGroup, name: String) extends Thread(threadGroup, name) {
