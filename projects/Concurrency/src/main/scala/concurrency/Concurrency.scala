@@ -5,7 +5,7 @@ object Concurrency {
     val extendGroup = new ThreadGroup("Extend Thread")
     val runnableGroup = new ThreadGroup("Implement Runnable")
 
-    
+
     val t1 = new MyThread(extendGroup, "Thread One")
     t1.setPriority(10)
 
@@ -20,13 +20,13 @@ object Concurrency {
     t1.start()
     t2.start()
     t3.start()
-  }
 
-  class MyThread(threadGroup: ThreadGroup, name: String) extends Thread(threadGroup, name) {
-    override def run(): Unit = {
-      for (i <- 1 to 10) {
-        println(s"Hello this is thread ${this.getThreadGroup.getName} ${this.getName} iteration $i")
-      }
+  }
+}
+class MyThread(threadGroup: ThreadGroup, name: String) extends Thread(threadGroup, name) {
+  override def run(): Unit = {
+    for (i <- 1 to 10) {
+      println(s"Hello this is thread ${this.getThreadGroup.getName} ${this.getName} iteration $i")
     }
   }
 }
