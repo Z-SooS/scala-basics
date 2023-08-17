@@ -22,6 +22,8 @@ object Concurrency {
     t3.start()
 
     displayAllThreads()
+
+    Futures.runActivity()
   }
 
   private def displayAllThreads(): Unit = {
